@@ -19,10 +19,9 @@ export default function Hero({ onCopyEmail }) {
       id="hero"
       className="relative w-full min-w-0 max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-20 lg:pt-16 lg:pb-28 flex flex-col items-center text-center"
     >
-      {/* 01 — Introduction Badge */}
+      {/* Status Badge */}
       <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-cyan-300 text-[11px] sm:text-xs font-mono font-medium shadow-lg shadow-cyan-500/10 mb-4 animate-float max-w-full">
-        <span className="text-cyan-400 font-bold">01 &bull; Introduction</span>
-        <span className="w-1 h-1 rounded-full bg-cyan-400/50" />
+        <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
         <span className="truncate">{profileData.statusBadge}</span>
       </div>
 
