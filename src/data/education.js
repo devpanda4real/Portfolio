@@ -9,7 +9,7 @@ export const educationData = {
     status: "In Progress",
     degree: "BSc (Hons) in Cloud Computing",
     institution: "SLTC Research University, Sri Lanka",
-    cgpa: "3.50 / 4.00",
+    cgpa: "3.53 / 4.00",
     division: "Second Class Upper",
     creditsCompleted: 52,
     totalCredits: 128,

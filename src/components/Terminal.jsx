@@ -103,7 +103,7 @@ ID  TOPIC                               CATEGORY             CORE MIGRATION STRA
       const isSuper = Boolean(window.EcosystemVisibility && window.EcosystemVisibility.isSuperAdmin);
       const out = isSuper
         ? `super admin (Imesh Kaushalya)\nFull administrative privileges active.\nAccess: Full Super Admin Privacy Matrix\nType 'logout' to return to Visitor mode.`
-        : `visitor\nCandidate: Imesh Kaushalya — BSc (Hons) Cloud Computing @ SLTC\nStatus:    Seeking General IT / Cloud Internship (2026)\nLocation:  Horana, Sri Lanka\nType 'admin' to open Super Admin mode.`;
+        : `visitor\nCandidate: Imesh Kaushalya — BSc (Hons) Cloud Computing @ SLTC\nStatus:    Seeking General IT / Cloud Internship (2027)\nLocation:  Horana, Sri Lanka\nType 'admin' to open Super Admin mode.`;
       setHistory((prev) => [...prev, { cmd, output: out }]);
       return;
     }
@@ -114,7 +114,7 @@ Email:    ikaushalya101official@gmail.com
 LinkedIn: https://linkedin.com/in/imesh-kaushalya
 GitHub:   https://github.com/devpanda4real
 Location: Horana, Western Province, Sri Lanka
-Status:   Available for On-site / Hybrid / Remote (2026)`;
+Status:   Available for On-site / Hybrid / Remote (2027)`;
       setHistory((prev) => [...prev, { cmd, output: out }]);
       return;
     }

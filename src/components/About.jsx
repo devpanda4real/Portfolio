@@ -42,7 +42,7 @@ export default function About() {
               <p>
                 I am an undergraduate student currently enrolled in the <strong>{profileData.degree}</strong> program at{' '}
                 <strong>{profileData.university}</strong> (Class of {profileData.graduationYear}), maintaining an academic standing of{' '}
-                <strong>CGPA 3.50 / 4.00</strong>.
+                <strong>CGPA 3.53 / 4.00</strong>.
               </p>
               <p>
                 My core studies and hands-on explorations center around <strong>cloud infrastructure</strong>, <strong>containerization with Docker</strong>, <strong>Linux server administration</strong>, and <strong>enterprise networking</strong> (TCP/IP subnetting, DNS, routing protocols, and firewall rules).
@@ -80,11 +80,11 @@ export default function About() {
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-white/5">
                 <span className="text-[11px] font-mono text-slate-400 block mb-1">Academic CGPA</span>
-                <span className="text-cyan-400 font-bold font-mono text-sm">3.50 / 4.00</span>
+                <span className="text-cyan-400 font-bold font-mono text-sm">3.53 / 4.00</span>
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-white/5">
                 <span className="text-[11px] font-mono text-slate-400 block mb-1">Target Period</span>
-                <span className="text-white font-semibold text-xs">2026 IT Internship</span>
+                <span className="text-white font-semibold text-xs">2027 IT Internship</span>
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-white/5">
                 <span className="text-[11px] font-mono text-slate-400 block mb-1">Working Modality</span>

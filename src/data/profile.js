@@ -13,7 +13,7 @@ export const profileData = {
   location: "Horana, Western Province, Sri Lanka",
   workPreference: "Available for On-site / Hybrid / Remote",
   
-  statusBadge: "Seeking General IT & Cloud Internships (2026)",
+  statusBadge: "Seeking General IT & Cloud Internships (2027)",
   headline: "Architecting Resilient Cloud Systems & Zero-Downtime Infrastructures",
   
   bio: "Passionate Cloud Computing undergraduate at SLTC Research University specializing in AWS Cloud Architectures, Containerization (Docker), RESTful APIs, and DevOps CI/CD pipelines. Proven track record leading full-lifecycle capstone engineering teams and authoring production-grade software specifications.",
@@ -34,7 +34,7 @@ export const profileData = {
   ],
 
   statistics: [
-    { label: "Cumulative GPA", value: "3.50", subtext: "Second Class Upper" },
+    { label: "Cumulative GPA", value: "3.53", subtext: "Second Class Upper" },
     { label: "Degree Progress", value: "52 / 128", subtext: "Credits Completed (40.6%)" },
     { label: "Target SGPA", value: "3.85+", subtext: "Coursework & Labs" },
     { label: "Code Sprints", value: "18 Days", subtext: "Active Velocity" }

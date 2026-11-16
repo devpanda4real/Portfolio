@@ -81,7 +81,7 @@ export const terminalCommonCommands = {
   about: `Imesh Kaushalya
 BSc (Hons) in Cloud Computing undergraduate at SLTC Research University (2024–2028).
 Focused on Cloud Architectures, Containerization (Docker), RESTful APIs, and DevOps CI/CD.
-Currently seeking General IT & Cloud Engineering internships for 2026.
+Currently seeking General IT & Cloud Engineering internships for 2027.
 Based in Horana, Sri Lanka (Available for On-site / Hybrid / Remote).`,
 
   skills: `Languages
@@ -101,7 +101,7 @@ Git & GitHub · Jira (Agile/Scrum) · Postman · Docker Hub`,
 
   education: `BSc (Hons) Cloud Computing (undergraduate)
 SLTC Research University, Sri Lanka
-Expected Graduation: 2028 | Current CGPA: 3.50 / 4.00 (Second Class Upper)
+Expected Graduation: 2028 | Current CGPA: 3.53 / 4.00 (Second Class Upper)
 Focus areas: Cloud Infrastructure · Networking · SQA · Cyber Law · Docker
 
 GCE A/L (Advanced Level)
@@ -127,13 +127,13 @@ Link: https://github.com/devpanda4real/JAVA`,
 
   github: `GitHub Profile: https://github.com/devpanda4real (@devpanda4real)
 Candidate:      Imesh Kaushalya — Cloud & Security Enthusiast
-SLTC Academic:  3.50 CGPA • 52 / 128 Credits Completed
+SLTC Academic:  3.53 CGPA • 52 / 128 Credits Completed
 Core Repos:     JAVA, Basic_python, luxora-concierge, cloud-portfolio`,
 
   progress: `[ACADEMIC RESULTS & GITHUB VELOCITY TELEMETRY]
 Candidate:          Imesh Kaushalya
 Academic Program:   BSc (Hons) in Cloud Computing — SLTC Research University (2024–2028)
-Cumulative GPA:     3.50 / 4.00 (Second Class Upper Division)
+Cumulative GPA:     3.53 / 4.00 (Second Class Upper Division)
 Degree Credits:     52 / 128 Credits Completed (40.6% Progress)
 Current Sprint:     Targeting 3.85+ SGPA in Coursework & Lab Practicals
 GitHub Velocity:    18 Days Active Code Sprints (github.com/devpanda4real)
