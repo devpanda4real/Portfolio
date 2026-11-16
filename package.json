@@ -1,0 +1,35 @@
+{
+  "name": "imesh-kaushalya-portfolio",
+  "version": "2.0.0",
+  "description": "Imesh Kaushalya — Cloud Computing Undergraduate & Professional Engineering Portfolio",
+  "main": "serve.js",
+  "bin": {
+    "imesh": "serve.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node serve.js"
+  },
+  "keywords": [
+    "cloud-computing",
+    "portfolio",
+    "aws",
+    "docker",
+    "linux",
+    "sltc",
+    "imesh-kaushalya"
+  ],
+  "author": "Imesh Kaushalya <ikaushalya101official@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.2.0"
+  }
+}

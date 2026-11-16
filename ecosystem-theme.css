@@ -1,0 +1,267 @@
+/* =========================================================================
+   IMESH KAUSHALYA ECOSYSTEM - MULTI-THEME ENGINE
+   Shared CSS Variables & Dynamic Skinning across Portfolio, Life OS & GPA Hub
+   ========================================================================= */
+
+:root {
+  --eco-theme-id: 'cyber-cyan';
+  --eco-bg: #070b14;
+  --eco-card: rgba(12, 19, 34, 0.85);
+  --eco-card-solid: #0c1322;
+  --eco-card-hover: #111b2e;
+  --eco-border: rgba(6, 182, 212, 0.2);
+  --eco-border-hover: rgba(6, 182, 212, 0.5);
+  --eco-accent: #06b6d4;
+  --eco-accent-text: #22d3ee;
+  --eco-accent-glow: rgba(6, 182, 212, 0.35);
+  --eco-secondary: #6366f1;
+  --eco-nav: rgba(7, 11, 20, 0.9);
+  --eco-gradient: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+/* 1. Cyber Cyan (Default: Obsidian Space & Electric Cyan) */
+[data-theme="cyber-cyan"] {
+  --eco-theme-id: 'cyber-cyan';
+  --eco-bg: #070b14;
+  --eco-card: rgba(12, 19, 34, 0.85);
+  --eco-card-solid: #0c1322;
+  --eco-card-hover: #111b2e;
+  --eco-border: rgba(6, 182, 212, 0.22);
+  --eco-border-hover: rgba(6, 182, 212, 0.55);
+  --eco-accent: #06b6d4;
+  --eco-accent-text: #22d3ee;
+  --eco-accent-glow: rgba(6, 182, 212, 0.35);
+  --eco-secondary: #6366f1;
+  --eco-nav: rgba(7, 11, 20, 0.92);
+  --eco-gradient: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+/* 2. Emerald Matrix (Hacker Noir & Cyber Emerald) */
+[data-theme="emerald-matrix"] {
+  --eco-theme-id: 'emerald-matrix';
+  --eco-bg: #02110c;
+  --eco-card: rgba(5, 27, 20, 0.88);
+  --eco-card-solid: #051b14;
+  --eco-card-hover: #0c2b20;
+  --eco-border: rgba(16, 185, 129, 0.25);
+  --eco-border-hover: rgba(16, 185, 129, 0.6);
+  --eco-accent: #10b981;
+  --eco-accent-text: #34d399;
+  --eco-accent-glow: rgba(16, 185, 129, 0.35);
+  --eco-secondary: #14b8a6;
+  --eco-nav: rgba(2, 17, 12, 0.94);
+  --eco-gradient: linear-gradient(135deg, #10b981, #059669);
+}
+
+/* 3. Royal Amethyst (Cosmic Violet & Neon Fuchsia) */
+[data-theme="royal-amethyst"] {
+  --eco-theme-id: 'royal-amethyst';
+  --eco-bg: #0c0618;
+  --eco-card: rgba(22, 12, 43, 0.88);
+  --eco-card-solid: #160c2b;
+  --eco-card-hover: #221240;
+  --eco-border: rgba(168, 85, 247, 0.25);
+  --eco-border-hover: rgba(168, 85, 247, 0.6);
+  --eco-accent: #a855f7;
+  --eco-accent-text: #c084fc;
+  --eco-accent-glow: rgba(168, 85, 247, 0.35);
+  --eco-secondary: #ec4899;
+  --eco-nav: rgba(12, 6, 24, 0.94);
+  --eco-gradient: linear-gradient(135deg, #a855f7, #ec4899);
+}
+
+/* 4. Midnight Sapphire (Abyss Navy & Royal Cobalt) */
+[data-theme="midnight-sapphire"] {
+  --eco-theme-id: 'midnight-sapphire';
+  --eco-bg: #030a1c;
+  --eco-card: rgba(8, 20, 52, 0.88);
+  --eco-card-solid: #081432;
+  --eco-card-hover: #0f214f;
+  --eco-border: rgba(59, 130, 246, 0.25);
+  --eco-border-hover: rgba(59, 130, 246, 0.6);
+  --eco-accent: #3b82f6;
+  --eco-accent-text: #60a5fa;
+  --eco-accent-glow: rgba(59, 130, 246, 0.35);
+  --eco-secondary: #0284c7;
+  --eco-nav: rgba(3, 10, 28, 0.94);
+  --eco-gradient: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+/* 5. Tokyo Sunset (Dark Volcanic Magma & Fiery Crimson) */
+[data-theme="tokyo-sunset"] {
+  --eco-theme-id: 'tokyo-sunset';
+  --eco-bg: #14050a;
+  --eco-card: rgba(36, 10, 19, 0.88);
+  --eco-card-solid: #220912;
+  --eco-card-hover: #36111e;
+  --eco-border: rgba(244, 63, 94, 0.25);
+  --eco-border-hover: rgba(244, 63, 94, 0.6);
+  --eco-accent: #f43f5e;
+  --eco-accent-text: #fb7185;
+  --eco-accent-glow: rgba(244, 63, 94, 0.35);
+  --eco-secondary: #f59e0b;
+  --eco-nav: rgba(20, 5, 10, 0.94);
+  --eco-gradient: linear-gradient(135deg, #f43f5e, #f59e0b);
+}
+
+/* 6. Nordic Titanium (Crisp Aerospace Slate & Arctic Platinum) */
+[data-theme="nordic-titanium"] {
+  --eco-theme-id: 'nordic-titanium';
+  --eco-bg: #0b0f17;
+  --eco-card: rgba(19, 25, 36, 0.88);
+  --eco-card-solid: #131924;
+  --eco-card-hover: #1e2638;
+  --eco-border: rgba(148, 163, 184, 0.25);
+  --eco-border-hover: rgba(148, 163, 184, 0.6);
+  --eco-accent: #38bdf8;
+  --eco-accent-text: #7dd3fc;
+  --eco-accent-glow: rgba(56, 189, 248, 0.3);
+  --eco-secondary: #94a3b8;
+  --eco-nav: rgba(11, 15, 23, 0.94);
+  --eco-gradient: linear-gradient(135deg, #38bdf8, #cbd5e1);
+}
+
+/* Smooth Transition across theme switches */
+[data-theme],
+[data-theme] body,
+[data-theme] .glass-card,
+[data-theme] .spotlight-card,
+[data-theme] .glass-nav,
+[data-theme] .glass-dock {
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Dynamic Overrides for Tailwind & Custom Elements */
+html,
+html[data-theme],
+body,
+body[data-theme],
+[data-theme].bg-dark-950,
+[data-theme] .bg-dark-950 {
+  background-color: var(--eco-bg) !important;
+}
+
+[data-theme] .bg-dark-900,
+[data-theme] .bg-slate-900,
+[data-theme] .bg-slate-900\/90,
+[data-theme] .bg-slate-900\/80 {
+  background-color: var(--eco-card-solid) !important;
+}
+
+[data-theme] .bg-dark-850,
+[data-theme] .bg-slate-800,
+[data-theme] .bg-slate-800\/90 {
+  background-color: var(--eco-card-hover) !important;
+}
+
+[data-theme] .glass-card,
+[data-theme] .spotlight-card {
+  background-color: var(--eco-card) !important;
+  border-color: var(--eco-border) !important;
+}
+
+[data-theme] .glass-card:hover,
+[data-theme] .spotlight-card:hover {
+  border-color: var(--eco-border-hover) !important;
+}
+
+[data-theme] .glass-nav,
+[data-theme] .glass-dock {
+  background: var(--eco-nav) !important;
+  border-color: var(--eco-border) !important;
+}
+
+[data-theme] .text-cyan-400,
+[data-theme] .text-cyan-300,
+[data-theme] .text-brand-400,
+[data-theme] .text-brand-300 {
+  color: var(--eco-accent-text) !important;
+}
+
+[data-theme] .border-cyan-500,
+[data-theme] .border-cyan-400,
+[data-theme] .border-brand-500 {
+  border-color: var(--eco-accent) !important;
+}
+
+[data-theme] [class*="border-cyan-500\/"],
+[data-theme] [class*="border-brand-500\/"] {
+  border-color: var(--eco-border) !important;
+}
+
+[data-theme] [class*="bg-cyan-500\/"],
+[data-theme] [class*="bg-brand-500\/"] {
+  background-color: color-mix(in srgb, var(--eco-accent) 15%, transparent) !important;
+}
+
+[data-theme] .glow-pulse {
+  background: var(--eco-accent-glow) !important;
+}
+
+/* Theme Dropdown UI Styling */
+.eco-theme-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  max-width: 90vw;
+  background: var(--eco-card-solid);
+  border: 1px solid var(--eco-border);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.65), 0 0 20px -5px var(--eco-accent-glow);
+  padding: 10px;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: none;
+  animation: ecoThemeMenuFadeIn 0.2s ease-out forwards;
+}
+
+.eco-theme-menu.active {
+  display: block;
+}
+
+@keyframes ecoThemeMenuFadeIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.eco-theme-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.eco-theme-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--eco-border);
+  color: #ffffff;
+}
+
+.eco-theme-item.active {
+  background: color-mix(in srgb, var(--eco-accent) 18%, transparent);
+  border-color: var(--eco-accent);
+  color: #ffffff;
+}
+
+.eco-theme-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.eco-theme-swatch span {
+  flex: 1;
+  height: 100%;
+}
