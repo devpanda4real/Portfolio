@@ -42,7 +42,7 @@ export const profileData = {
 
   socialLinks: {
     email: "ikaushalya101official@gmail.com",
-    linkedin: "https://linkedin.com/in/imesh-kaushalya",
+    linkedin: "https://www.linkedin.com/in/imesh-kaushalya-0a080a2b6/",
     github: "https://github.com/devpanda4real",
     capstone: "https://luxora.bond/"
   }

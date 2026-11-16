@@ -116,7 +116,7 @@ export default function Contact({ onCopyEmail }) {
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-white hover:text-indigo-400 transition-colors block truncate max-w-[210px] sm:max-w-none"
                 >
-                  linkedin.com/in/imesh-kaushalya
+                  linkedin.com/in/imesh-kaushalya-0a080a2b6
                 </a>
               </div>
             </div>

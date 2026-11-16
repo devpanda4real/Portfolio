@@ -111,7 +111,7 @@ ID  TOPIC                               CATEGORY             CORE MIGRATION STRA
     if (normalized === 'contact') {
       const out = `Official Communication Channels:
 Email:    ikaushalya101official@gmail.com
-LinkedIn: https://linkedin.com/in/imesh-kaushalya
+LinkedIn: https://www.linkedin.com/in/imesh-kaushalya-0a080a2b6/
 GitHub:   https://github.com/devpanda4real
 Location: Horana, Western Province, Sri Lanka
 Status:   Available for On-site / Hybrid / Remote (2027)`;
