@@ -47,7 +47,6 @@ The architecture separates content from presentation: all personal details, proj
    - **Luxora Luxury Concierge**: Flagship capstone (CCS2313 Group 08) featuring 71 Functional Requirements, 23 Non-Functional Requirements, 25 Business Rules, and live production deployment at [luxora.bond](https://luxora.bond/).
    - **Smart City Route Optimizer**: High-performance Java in-memory graph modeling and Dijkstra/BFS shortest-path transit algorithm.
    - **Detail Me**: Cloud-connected mobile technician dispatch architecture and state machine specifications.
-   - **CarePulse**: Full-stack Next.js 14 and Appwrite Cloud healthcare portal.
 
 4. **Multi-Palette Theme Engine**:
    - 6 curated palettes: `cyber-cyan`, `emerald-matrix`, `royal-amethyst`, `midnight-sapphire`, `tokyo-sunset`, and `nordic-titanium`.

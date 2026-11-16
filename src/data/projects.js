@@ -146,37 +146,5 @@ export const projectsData = [
         desc: "Plan to implement cloud-hosted serverless APIs for real-time tracking and digital payments."
       }
     ]
-  },
-  {
-    id: "carepulse",
-    title: "CarePulse Medical Portal",
-    fileName: "CarePulse_Cloud.tsx",
-    subtitle: "Healthcare portal providing streamlined patient onboarding, appointment scheduling, and automated notifications.",
-    badge: "Full-Stack MVP",
-    category: "cloud-web",
-    categoryLabel: "Cloud & Web",
-    status: "Full-Stack MVP",
-    statusType: "completed",
-    projectType: "Full-Stack Application",
-    githubUrl: "https://github.com/devpanda4real",
-    role: "Full-Stack Cloud Developer",
-    summary: "Healthcare portal providing streamlined patient onboarding, appointment scheduling, and automated notifications.",
-    tags: ["Next.js 14", "TypeScript", "Appwrite Cloud", "Tailwind CSS"],
-    completedContributions: [
-      {
-        title: "Patient Onboarding & Verification",
-        desc: "Engineered secure patient onboarding with form validation, file uploads, and encrypted storage."
-      },
-      {
-        title: "Appointment Management",
-        desc: "Built reactive calendar scheduling with automated administrative dispatch and cancellation flows."
-      }
-    ],
-    plannedImprovements: [
-      {
-        title: "Telehealth Video Consultation",
-        desc: "Integration of WebRTC video channels for remote doctor-patient checkups."
-      }
-    ]
   }
 ];

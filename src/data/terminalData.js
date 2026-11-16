@@ -123,13 +123,7 @@ Link: https://luxora.bond/
 Java Graph Engine & Shortest Path Algorithm
 In-memory graph modeling and Dijkstra/BFS routing for urban transit.
 Java · Graph Theory · Data Structures · OOP
-Link: https://github.com/devpanda4real/JAVA
-
-[3] CarePulse Hospital Management System
-Next.js 14 Medical Portal & Cloud Infrastructure
-Patient appointment management and automated notifications.
-Next.js · TypeScript · Appwrite · Tailwind CSS
-Link: https://github.com/devpanda4real`,
+Link: https://github.com/devpanda4real/JAVA`,
 
   github: `GitHub Profile: https://github.com/devpanda4real (@devpanda4real)
 Candidate:      Imesh Kaushalya — Cloud & Security Enthusiast

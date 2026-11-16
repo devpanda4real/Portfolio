@@ -347,11 +347,17 @@ function startServer(port) {
     console.log(`║   Press Ctrl+C to stop server.                                    ║`);
     console.log(`╚═══════════════════════════════════════════════════════════════════╝\n`);
 
-    // Auto-open browser unless --no-open flag is present
+    // Auto-open browser (prefer Microsoft Edge on Windows if requested)
     if (!process.argv.includes('--no-open')) {
-      const openCmd = process.platform === 'win32' ? `start "" "${url}"` :
-                      process.platform === 'darwin' ? `open "${url}"` : `xdg-open "${url}"`;
-      exec(openCmd, () => {});
+      const openCmd = process.platform === 'win32'
+        ? `start msedge "${url}"`
+        : process.platform === 'darwin' ? `open "${url}"` : `xdg-open "${url}"`;
+      exec(openCmd, (err) => {
+        if (err && process.platform === 'win32') {
+          // Fallback to system default browser if msedge command fails
+          exec(`start "" "${url}"`, () => {});
+        }
+      });
     }
   });
 }
