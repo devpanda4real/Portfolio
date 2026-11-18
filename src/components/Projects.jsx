@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Layers,
   Info,
@@ -8,25 +8,43 @@ import {
   Sparkles,
   FileText,
   CheckSquare,
-  ShieldCheck,
-  Scale,
   Cpu,
   Bot,
-  Network,
   FileSpreadsheet,
   GitBranch,
-  Navigation,
   CheckCircle,
   Compass,
   Code2,
-  Smartphone,
-  Layout
+  Layout,
+  Star,
+  Globe
 } from 'lucide-react';
 import { projectsData } from '../data/projects.js';
+import { fetchPublicRepos } from '../services/github.js';
+import { GITHUB_CONFIG } from '../config/github.config.js';
 
 export default function Projects({ onOpenLuxoraModal }) {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [githubTelemetry, setGithubTelemetry] = useState({});
 
+  useEffect(() => {
+    // Optionally fetch live telemetry (stars, latest pushed dates) for projects linked to GitHub
+    async function loadTelemetry() {
+      try {
+        const repos = await fetchPublicRepos(GITHUB_CONFIG.username, false);
+        const map = {};
+        for (const repo of repos) {
+          map[repo.name.toLowerCase()] = repo;
+        }
+        setGithubTelemetry(map);
+      } catch {
+        // Silently fallback to static data if offline
+      }
+    }
+    loadTelemetry();
+  }, []);
+
+  // Filter curated projects based on active tab
   const filteredProjects = projectsData.filter((p) => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'cloud-web') return p.category === 'cloud-web';
@@ -37,7 +55,13 @@ export default function Projects({ onOpenLuxoraModal }) {
 
   const flagship = projectsData.find((p) => p.id === 'luxora');
   const secondaryProjects = filteredProjects.filter((p) => p.id !== 'luxora');
-  const showFlagship = activeFilter === 'all' || activeFilter === 'cloud-web';
+  const showFlagship = (activeFilter === 'all' || activeFilter === 'cloud-web') && flagship;
+
+  // Filter counts
+  const countAll = projectsData.length;
+  const countCloudWeb = projectsData.filter((p) => p.category === 'cloud-web').length;
+  const countAlgorithms = projectsData.filter((p) => p.category === 'algorithms').length;
+  const countConcept = projectsData.filter((p) => p.category === 'concept').length;
 
   return (
     <section id="projects" className="relative max-w-7xl mx-auto px-6 py-20 border-t border-white/5 reveal">
@@ -50,8 +74,8 @@ export default function Projects({ onOpenLuxoraModal }) {
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2">
             Featured Projects &amp; Implementations
           </h2>
-          <p className="text-slate-400 text-sm mt-2 max-w-xl">
-            Each project details its overview, candidate role, completed contributions, technology stack, and planned improvements.
+          <p className="text-slate-400 text-sm mt-2 max-w-2xl">
+            Showcasing architectural capstones, full-stack cloud systems, and algorithmic engines with role contributions, system specifications, and live platforms.
           </p>
         </div>
 
@@ -59,48 +83,48 @@ export default function Projects({ onOpenLuxoraModal }) {
         <div className="flex flex-wrap items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-white/10 text-xs font-medium">
           <button
             onClick={() => setActiveFilter('all')}
-            className={`px-3.5 py-1.5 rounded-xl transition-all ${
+            className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
               activeFilter === 'all'
                 ? 'text-white bg-cyan-600/30 border border-cyan-500/40'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            All (4)
+            All ({countAll})
           </button>
           <button
             onClick={() => setActiveFilter('cloud-web')}
-            className={`px-3.5 py-1.5 rounded-xl transition-all ${
+            className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
               activeFilter === 'cloud-web'
                 ? 'text-white bg-cyan-600/30 border border-cyan-500/40'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            Cloud &amp; Web (2)
+            Cloud &amp; Web ({countCloudWeb})
           </button>
           <button
             onClick={() => setActiveFilter('algorithms')}
-            className={`px-3.5 py-1.5 rounded-xl transition-all ${
+            className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
               activeFilter === 'algorithms'
                 ? 'text-white bg-cyan-600/30 border border-cyan-500/40'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            Algorithms (1)
+            Algorithms ({countAlgorithms})
           </button>
           <button
             onClick={() => setActiveFilter('concept')}
-            className={`px-3.5 py-1.5 rounded-xl transition-all ${
+            className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
               activeFilter === 'concept'
                 ? 'text-white bg-cyan-600/30 border border-cyan-500/40'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            Concepts &amp; Mobile (1)
+            Concepts &amp; Mobile ({countConcept})
           </button>
         </div>
       </div>
 
-      {/* Status Legend Bar */}
+      {/* Transparent Status Legend Bar */}
       <div className="mb-10 p-4 rounded-xl bg-slate-900/60 border border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
         <div className="flex items-center gap-2 text-slate-300">
           <Info className="w-4 h-4 text-cyan-400" />
@@ -111,7 +135,7 @@ export default function Projects({ onOpenLuxoraModal }) {
             <span className="w-2 h-2 rounded-full bg-emerald-400" /> Completed
           </span>
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 font-semibold">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" /> In Progress
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" /> In Production
           </span>
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">
             <span className="w-2 h-2 rounded-full bg-sky-400" /> Planned
@@ -119,8 +143,8 @@ export default function Projects({ onOpenLuxoraModal }) {
         </div>
       </div>
 
-      {/* FLAGSHIP FEATURED PROJECT: LUXORA */}
-      {showFlagship && flagship && (
+      {/* FLAGSHIP CAPSTONE PROJECT: LUXORA */}
+      {showFlagship && (
         <div className="mb-12">
           <div className="project-card spotlight-card border-cyan-500/40 shadow-2xl relative overflow-hidden">
             {/* Flagship Browser Frame Header */}
@@ -292,67 +316,60 @@ export default function Projects({ onOpenLuxoraModal }) {
         </div>
       )}
 
-      {/* SECONDARY PROJECTS (Responsive Grid) */}
+      {/* FEATURED PROJECTS GRID (Portfolio, Smart City, Detail Me) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {secondaryProjects.map((project) => (
-          <div key={project.id} className="project-card spotlight-card flex flex-col justify-between">
-            <div>
-              {/* Window Mockup Header */}
-              <div className="px-4 py-3 bg-slate-950 border-b border-white/10 flex items-center justify-between">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                </div>
-                <div className="px-2.5 py-0.5 rounded-md bg-slate-900 border border-white/5 text-[10px] font-mono text-indigo-300 flex items-center gap-1">
-                  <Cpu className="w-2.5 h-2.5 text-indigo-400" />
-                  <span>{project.fileName}</span>
-                </div>
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> {project.status}
-                </span>
-              </div>
+        {secondaryProjects.map((project) => {
+          // Check if GitHub telemetry exists for this project
+          const repoKey = project.id === 'portfolio' ? 'portfolio' : project.id === 'smart-city' ? 'java' : null;
+          const liveRepo = repoKey && githubTelemetry[repoKey] ? githubTelemetry[repoKey] : null;
 
-              <div className="p-6">
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-400 text-[11px] font-mono border border-indigo-500/20">
-                    <GitBranch className="w-3 h-3" /> {project.role}
-                  </span>
-                  <span className="text-xs font-mono text-slate-400">{project.projectType}</span>
-                </div>
-
-                <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors flex items-center gap-2">
-                  {project.title}
-                </h3>
-                <p className="text-xs text-slate-300 mt-2 mb-4 leading-relaxed">{project.summary}</p>
-
-                {/* Completed Work */}
-                <div className="mb-4">
-                  <div className="flex items-center gap-1.5 mb-2 text-xs font-semibold text-emerald-400 font-mono">
-                    <CheckCircle className="w-3.5 h-3.5" /> Completed Work:
+          return (
+            <div key={project.id} className="project-card spotlight-card flex flex-col justify-between">
+              <div>
+                {/* Window Mockup Header */}
+                <div className="px-4 py-3 bg-slate-950 border-b border-white/10 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                   </div>
-                  <ul className="space-y-2 text-xs text-slate-300 leading-relaxed">
-                    {project.completedContributions?.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1.5" />
-                        <span>
-                          <strong>{item.title}:</strong> {item.desc}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="px-2.5 py-0.5 rounded-md bg-slate-900 border border-white/5 text-[10px] font-mono text-indigo-300 flex items-center gap-1">
+                    <Cpu className="w-2.5 h-2.5 text-indigo-400" />
+                    <span>{project.fileName}</span>
+                  </div>
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> {project.status}
+                  </span>
                 </div>
 
-                {/* Planned Improvements */}
-                {project.plannedImprovements && project.plannedImprovements.length > 0 && (
-                  <div className="p-3 rounded-lg bg-sky-950/20 border border-sky-500/20 mb-4">
-                    <div className="flex items-center gap-1.5 mb-1.5 text-xs font-semibold text-sky-400 font-mono">
-                      <Compass className="w-3.5 h-3.5" /> Planned Improvements:
+                <div className="p-6">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-400 text-[11px] font-mono border border-indigo-500/20">
+                      <GitBranch className="w-3 h-3" /> {project.role}
+                    </span>
+                    <span className="text-xs font-mono text-slate-400">{project.projectType}</span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors flex items-center justify-between gap-2">
+                    <span>{project.title}</span>
+                    {liveRepo && liveRepo.stars > 0 && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 text-xs font-mono border border-amber-500/20">
+                        <Star className="w-3 h-3 fill-amber-400" />
+                        {liveRepo.stars}
+                      </span>
+                    )}
+                  </h3>
+                  <p className="text-xs text-slate-300 mt-2 mb-4 leading-relaxed">{project.summary}</p>
+
+                  {/* Completed Work */}
+                  <div className="mb-4">
+                    <div className="flex items-center gap-1.5 mb-2 text-xs font-semibold text-emerald-400 font-mono">
+                      <CheckCircle className="w-3.5 h-3.5" /> Completed Work:
                     </div>
-                    <ul className="space-y-1.5 text-[11px] text-slate-300">
-                      {project.plannedImprovements.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-1.5">
-                          <span className="text-sky-400">&bull;</span>
+                    <ul className="space-y-2 text-xs text-slate-300 leading-relaxed">
+                      {project.completedContributions?.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1.5" />
                           <span>
                             <strong>{item.title}:</strong> {item.desc}
                           </span>
@@ -360,43 +377,78 @@ export default function Projects({ onOpenLuxoraModal }) {
                       ))}
                     </ul>
                   </div>
-                )}
 
-                {/* Tech Badges */}
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-0.5 rounded-md bg-slate-900 border border-white/5 text-[11px] font-mono text-indigo-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {/* Planned Improvements */}
+                  {project.plannedImprovements && project.plannedImprovements.length > 0 && (
+                    <div className="p-3 rounded-lg bg-sky-950/20 border border-sky-500/20 mb-4">
+                      <div className="flex items-center gap-1.5 mb-1.5 text-xs font-semibold text-sky-400 font-mono">
+                        <Compass className="w-3.5 h-3.5" /> Planned Improvements:
+                      </div>
+                      <ul className="space-y-1.5 text-[11px] text-slate-300">
+                        {project.plannedImprovements.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-1.5">
+                            <span className="text-sky-400">&bull;</span>
+                            <span>
+                              <strong>{item.title}:</strong> {item.desc}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Tech Badges */}
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-0.5 rounded-md bg-slate-900 border border-white/5 text-[11px] font-mono text-indigo-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Card Action Footer */}
-            <div className="px-6 py-3.5 bg-slate-950/60 border-t border-white/5 flex items-center justify-between">
-              {project.githubUrl ? (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-400 hover:underline"
-                >
-                  <Code2 className="w-3.5 h-3.5" /> View Repository
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              ) : (
-                <span className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400">
-                  <Layout className="w-3.5 h-3.5 text-sky-400" /> Systems Architecture
-                </span>
-              )}
-              <span className="text-[11px] text-slate-500 font-mono">{project.projectType}</span>
+              {/* Card Action Footer */}
+              <div className="px-6 py-3.5 bg-slate-950/60 border-t border-white/5 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-400 hover:underline"
+                    >
+                      <Code2 className="w-3.5 h-3.5" /> View Repository
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
+
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 hover:underline"
+                    >
+                      <Globe className="w-3.5 h-3.5" /> Live Platform
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
+
+                  {!project.githubUrl && !project.liveUrl && (
+                    <span className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400">
+                      <Layout className="w-3.5 h-3.5 text-sky-400" /> Systems Architecture
+                    </span>
+                  )}
+                </div>
+                <span className="text-[11px] text-slate-500 font-mono">{project.projectType}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

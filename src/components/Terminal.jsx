@@ -3,8 +3,7 @@ import { Terminal as TerminalIcon } from 'lucide-react';
 import {
   terminalCommonCommands,
   neofetchWindows,
-  neofetchMac,
-  migrationRadarItems
+  neofetchMac
 } from '../data/terminalData.js';
 
 export default function Terminal({ onAdminLogin }) {
@@ -61,32 +60,6 @@ export default function Terminal({ onAdminLogin }) {
         ...prev,
         { cmd, output: terminalOS === 'mac' ? neofetchMac : neofetchWindows }
       ]);
-      return;
-    }
-
-    if (normalized.startsWith('migration-news')) {
-      const parts = normalized.split(/\s+/);
-      const param = parts[1];
-      if (param && migrationRadarItems[param]) {
-        const item = migrationRadarItems[param];
-        const out = `[${param}] ${item.title}\n========================================================================\nCategory:        ${item.category}\nStrategy:        ${item.strategy}\nDowntime Target: ${item.downtime}\nTakeaway:        ${item.takeaway}\nDocumentation:   ${item.url}\n\nExecution / CLI Snippet:\n${item.snippet}\n========================================================================\n[i] Enter 'migration-news' to view the complete radar summary table.`;
-        setHistory((prev) => [...prev, { cmd, output: out }]);
-      } else {
-        const out = `IMESH KAUSHALYA — CLOUD & SYSTEMS MIGRATION NEWS RADAR (2026)
-========================================================================================
-ID  TOPIC                               CATEGORY             CORE MIGRATION STRATEGY
-----------------------------------------------------------------------------------------
-[1] AWS 7 Rs Enterprise Cloud Cutover    Cloud Migration      AWS MGN + DMS Continuous Replication (CDC)
-[2] Zero-Downtime PostgreSQL to Aurora  Database & Systems   Logical replication slots + weighted cutover
-[3] VM Monolith to Amazon EKS Modernize DevOps & K8s         Lightweight OCI containers + ArgoCD GitOps
-[4] Live Linux Kernel Patching (Kpatch) Database & Systems   Zero-reboot memory ftrace kernel CVE patches
-[5] Strangler Fig Microservice Cutover  Cloud Architecture   API Gateway path routing & incremental cutover
-[6] Serverless AI Cutover (Gemini APIs) Modern AI & Cloud    Dedicated GPU VM offload to JSON Schema APIs
-========================================================================================
-[i] Enter 'migration-news <1-6>' (e.g. 'migration-news 1') to inspect architecture snippet & cutover steps.
-[+] Enterprise Cloud Migration Radar by Imesh Kaushalya.`;
-        setHistory((prev) => [...prev, { cmd, output: out }]);
-      }
       return;
     }
 
@@ -323,7 +296,7 @@ Status:   Available for On-site / Hybrid / Remote (2027)`;
         {/* Suggestion Chips */}
         <div className="px-3 py-2 bg-slate-950/80 border-t border-white/5 flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-slate-400">
           <span className="text-slate-500 mr-1">Quick:</span>
-          {['whoami', 'about', 'skills', 'projects', 'education', 'migration-news', 'neofetch', 'clear'].map(
+          {['whoami', 'about', 'skills', 'projects', 'education', 'neofetch', 'clear'].map(
             (cmd) => (
               <button
                 key={cmd}

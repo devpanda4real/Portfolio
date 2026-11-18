@@ -1,0 +1,39 @@
+name: Security & Advisory Monitor
+
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Runs every Monday at 08:00 UTC
+  workflow_dispatch:     # Allows manual on-demand execution from GitHub UI
+
+permissions:
+  contents: read
+
+jobs:
+  security-audit:
+    name: Audit GHSA-fc5q-39xc-vjpf & Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Locked Dependencies
+        run: npm ci
+
+      - name: Execute Security & Advisory Monitor
+        run: node scripts/security-monitor.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Archive Historical Security Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-audit-reports
+          path: reports/
+          retention-days: 90

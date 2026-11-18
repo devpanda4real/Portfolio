@@ -69,6 +69,51 @@ export const projectsData = [
     }
   },
   {
+    id: "portfolio",
+    title: "Interactive Cloud Portfolio",
+    fileName: "Portfolio.jsx",
+    subtitle: "High-Performance Cloud Engineering Portfolio & Interactive Terminal • 2026",
+    badge: "Full-Stack & DevOps Lead",
+    category: "cloud-web",
+    categoryLabel: "Cloud & Web",
+    status: "Production",
+    statusType: "completed",
+    projectType: "Production Cloud App",
+    liveUrl: "https://devpanda4real.github.io/Portfolio/",
+    githubUrl: "https://github.com/devpanda4real/Portfolio",
+    role: "Full-Stack Developer & DevOps Architect",
+    summary: "Production-grade personal developer portfolio engineered with React 19 and Vite 6. Features an interactive dual-mode terminal CLI, automated GitHub REST API synchronization with smart caching, and zero-downtime GitHub Actions edge deployment.",
+    tags: ["React 19", "Vite 6", "Tailwind CSS", "GitHub REST API", "CI/CD", "Docker"],
+    completedContributions: [
+      {
+        title: "React 19 & Vite 6 Core Architecture",
+        desc: "Engineered ultra-fast client-side bundle with sub-second HMR and optimized production chunks under 360 kB."
+      },
+      {
+        title: "Interactive Dual-Mode Terminal CLI",
+        desc: "Built a fully functional terminal emulator supporting Windows 11 PowerShell and macOS zsh environments with custom commands."
+      },
+      {
+        title: "Dynamic GitHub REST API Synchronization",
+        desc: "Implemented automated client-side telemetry pulling live repository stars, languages, and commit timestamps with smart caching."
+      },
+      {
+        title: "Edge Deployment & CI/CD Pipeline",
+        desc: "Architected automated GitHub Actions deployment pipelines for GitHub Pages with minimal read-only permission boundaries."
+      }
+    ],
+    plannedImprovements: [
+      {
+        title: "PWA Offline Service Worker",
+        desc: "Plan to integrate Progressive Web App capabilities for offline asset caching and instant loading."
+      },
+      {
+        title: "Serverless Visitor Telemetry",
+        desc: "Plan to deploy privacy-friendly AWS Lambda visit metrics without third-party tracking scripts."
+      }
+    ]
+  },
+  {
     id: "smart-city",
     title: "Smart City Navigation",
     fileName: "SmartCityRoute.java",
