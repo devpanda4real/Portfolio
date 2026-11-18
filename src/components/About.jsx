@@ -73,41 +73,41 @@ export default function About() {
               <Sparkles className="w-4 h-4 text-cyan-400" /> Profile Snapshot
             </h4>
 
-            <div className="grid grid-cols-2 gap-3 text-xs">
+            <div className="grid grid-cols-2 gap-3 text-xs sm:text-sm">
               <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-white/5">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">University</span>
-                <span className="text-white font-semibold text-xs">{profileData.university}</span>
+                <span className="text-xs font-mono text-slate-400 block mb-1">University</span>
+                <span className="text-white font-semibold text-xs sm:text-sm">{profileData.university}</span>
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-white/5">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">Academic CGPA</span>
-                <span className="text-cyan-400 font-bold font-mono text-sm">3.53 / 4.00</span>
+                <span className="text-xs font-mono text-slate-400 block mb-1">Academic CGPA</span>
+                <span className="text-cyan-400 font-bold font-mono text-sm sm:text-base">3.53 / 4.00</span>
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-white/5">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">Target Period</span>
-                <span className="text-white font-semibold text-xs">2027 IT Internship</span>
+                <span className="text-xs font-mono text-slate-400 block mb-1">Target Period</span>
+                <span className="text-white font-semibold text-xs sm:text-sm">2027 IT Internship</span>
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-950/60 border border-white/5">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">Working Modality</span>
-                <span className="text-emerald-400 font-semibold text-xs">{profileData.workPreference}</span>
+                <span className="text-xs font-mono text-slate-400 block mb-1">Working Modality</span>
+                <span className="text-emerald-400 font-semibold text-xs sm:text-sm">{profileData.workPreference}</span>
               </div>
             </div>
 
             <div className="pt-2">
-              <span className="text-[11px] font-mono text-slate-400 block mb-2">Core Focus Areas</span>
+              <span className="text-xs font-mono text-slate-400 block mb-2">Core Focus Areas</span>
               <div className="flex flex-wrap gap-1.5">
-                <span className="px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-[11px] font-mono">
+                <span className="px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono">
                   Cloud Infrastructure
                 </span>
-                <span className="px-2.5 py-1 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-300 text-[11px] font-mono">
+                <span className="px-2.5 py-1 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs font-mono">
                   Docker Containers
                 </span>
-                <span className="px-2.5 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[11px] font-mono">
+                <span className="px-2.5 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono">
                   Enterprise Networking
                 </span>
-                <span className="px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[11px] font-mono">
+                <span className="px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-mono">
                   Linux Systems
                 </span>
-                <span className="px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[11px] font-mono">
+                <span className="px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-mono">
                   Requirements Analysis (BA)
                 </span>
               </div>
@@ -120,8 +120,8 @@ export default function About() {
               <HeartHandshake className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-xs font-bold text-white block">Community &amp; Student Leadership</span>
-              <p className="text-slate-300 text-xs mt-0.5">
+              <span className="text-sm font-bold text-white block">Community &amp; Student Leadership</span>
+              <p className="text-slate-300 text-sm mt-1 leading-relaxed">
                 Active volunteer with SLTC Student Interactive Society (SIS), organizing campus cultural events, environmental cleanups, and flood relief initiatives.
               </p>
             </div>

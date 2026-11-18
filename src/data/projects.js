@@ -1,6 +1,6 @@
 /**
  * Featured Engineering Projects Data
- * Edit this file to add, update, or reorganize showcased projects.
+ * Concise, factual, ATS-friendly, and clearly separated.
  */
 
 export const projectsData = [
@@ -14,9 +14,9 @@ export const projectsData = [
     status: "Production",
     statusType: "completed",
     liveUrl: "https://luxora.bond/",
-    role: "Business Analyst (BA) & Chatbot Developer",
+    role: "Business Analyst & Chatbot Developer",
     team: "Group 08 — SLTC Research University • CCS2313",
-    summary: "Luxora is a subscription-based home concierge platform designed to help customers access and manage home-related services through subscription packages.",
+    summary: "Subscription-based home concierge platform connecting homeowners with verified service providers across curated subscription packages.",
     tags: ["React", "Node.js", "Express", "PostgreSQL", "Docker", "Jira"],
     metrics: {
       frCount: 71,
@@ -27,33 +27,17 @@ export const projectsData = [
     completedContributions: [
       {
         title: "Business Requirements Document (BRD)",
-        desc: "Prepared business requirements documentation for the project."
+        desc: "Authored formal system specifications documenting 71 Functional Requirements, 23 Non-Functional Requirements, and 25 Business Rules."
       },
       {
-        title: "Functional Requirements",
-        desc: "Documented 71 Functional Requirements (FRs)."
-      },
-      {
-        title: "Non-Functional Requirements",
-        desc: "Documented 23 Non-Functional Requirements (NFRs)."
-      },
-      {
-        title: "Business Rules",
-        desc: "Documented 25 Business Rules (BRs)."
-      },
-      {
-        title: "Requirements Analysis",
-        desc: "Contributed to defining the system's requirements, scope and business logic."
+        title: "Requirements Analysis & Chatbot Scoping",
+        desc: "Defined platform business logic, user interaction flows, and conversational triage architecture for concierge services."
       }
     ],
     plannedImprovements: [
       {
-        title: "Gemini LLM Chatbot API",
-        desc: "Plan to integrate Google's Gemini API to provide AI-powered conversational assistance."
-      },
-      {
-        title: "Chatbot Integration",
-        desc: "Plan to connect the chatbot with relevant platform features, depending on the final implementation scope."
+        title: "Gemini AI Chatbot Integration",
+        desc: "Plan to integrate Google's Gemini API to deploy the automated conversational concierge assistant."
       }
     ],
     hasModalSpecs: true,
@@ -61,10 +45,11 @@ export const projectsData = [
       courseCode: "CCS2313 — System Analysis & Design",
       group: "Luxora Group 08",
       teamRoles: [
-        { name: "Imesh Kaushalya", role: "Team Lead & BA / Chatbot Dev", contribution: "Authored 71 FRs, 23 NFRs, 25 BRs; Chatbot triage MVP" },
-        { name: "Pamindu Dilshan", role: "Full-Stack Dev & DB Architect", contribution: "Database schema design, REST API endpoints, JWT auth" },
-        { name: "Lakshitha Abeywickrama", role: "UI/UX & Frontend Engineer", contribution: "Figma wireframing, responsive dashboard, client UI" },
-        { name: "Dilshan Kavinda", role: "QA Engineer & Cloud Deployment", contribution: "Test case suites, Cloudflare edge routing, security audits" }
+        { name: "Imesh Kaushalya", role: "Business Analyst & Chatbot Developer", contribution: "Authored 71 FRs, 23 NFRs, 25 BRs; System analysis & conversational scoping" },
+        { name: "Deshan Ganganath", role: "Project Leader / Architecture Lead", contribution: "Project oversight, architecture design & integration" },
+        { name: "Rashen Anupama", role: "Backend & Database Architect", contribution: "Database schema design, REST API endpoints" },
+        { name: "Hasitha Bolukandura", role: "Frontend Engineer & QA", contribution: "Client UI integration, automated testing" },
+        { name: "Dulsath Withanage", role: "UI/UX Designer", contribution: "Wireframes, UI flows & design assets" }
       ]
     }
   },
@@ -72,44 +57,36 @@ export const projectsData = [
     id: "portfolio",
     title: "Interactive Cloud Portfolio",
     fileName: "Portfolio.jsx",
-    subtitle: "High-Performance Cloud Engineering Portfolio & Interactive Terminal • 2026",
-    badge: "Full-Stack & DevOps Lead",
+    subtitle: "High-Performance Cloud Portfolio & Interactive Terminal • 2026",
+    badge: "Frontend Developer & Creator (Personal Project)",
     category: "cloud-web",
     categoryLabel: "Cloud & Web",
     status: "Production",
     statusType: "completed",
-    projectType: "Production Cloud App",
+    projectType: "Personal Project",
     liveUrl: "https://devpanda4real.github.io/Portfolio/",
     githubUrl: "https://github.com/devpanda4real/Portfolio",
-    role: "Full-Stack Developer & DevOps Architect",
-    summary: "Production-grade personal developer portfolio engineered with React 19 and Vite 6. Features an interactive dual-mode terminal CLI, automated GitHub REST API synchronization with smart caching, and zero-downtime GitHub Actions edge deployment.",
+    role: "Frontend Developer & Creator",
+    summary: "Personal portfolio engineered with React 19 and Vite 6, featuring an interactive dual-mode CLI terminal and automated GitHub repository synchronization.",
     tags: ["React 19", "Vite 6", "Tailwind CSS", "GitHub REST API", "CI/CD", "Docker"],
     completedContributions: [
       {
-        title: "React 19 & Vite 6 Core Architecture",
-        desc: "Engineered ultra-fast client-side bundle with sub-second HMR and optimized production chunks under 360 kB."
+        title: "Dual-Mode Terminal CLI",
+        desc: "Built an interactive terminal emulator supporting Windows PowerShell & macOS zsh environments."
       },
       {
-        title: "Interactive Dual-Mode Terminal CLI",
-        desc: "Built a fully functional terminal emulator supporting Windows 11 PowerShell and macOS zsh environments with custom commands."
+        title: "Automatic GitHub Sync",
+        desc: "Integrated client-side GitHub REST API for live repository metadata, stars, and session caching."
       },
       {
-        title: "Dynamic GitHub REST API Synchronization",
-        desc: "Implemented automated client-side telemetry pulling live repository stars, languages, and commit timestamps with smart caching."
-      },
-      {
-        title: "Edge Deployment & CI/CD Pipeline",
-        desc: "Architected automated GitHub Actions deployment pipelines for GitHub Pages with minimal read-only permission boundaries."
+        title: "Automated CI/CD Pipeline",
+        desc: "Configured GitHub Actions CI/CD to automatically build and deploy production bundles to GitHub Pages."
       }
     ],
     plannedImprovements: [
       {
-        title: "PWA Offline Service Worker",
-        desc: "Plan to integrate Progressive Web App capabilities for offline asset caching and instant loading."
-      },
-      {
-        title: "Serverless Visitor Telemetry",
-        desc: "Plan to deploy privacy-friendly AWS Lambda visit metrics without third-party tracking scripts."
+        title: "Offline PWA Support",
+        desc: "Plan to add a service worker for offline asset caching and instant loading."
       }
     ]
   },
@@ -117,78 +94,62 @@ export const projectsData = [
     id: "smart-city",
     title: "Smart City Navigation",
     fileName: "SmartCityRoute.java",
-    subtitle: "Algorithmic route optimization and spatial network modeling for simulated urban transit corridors.",
+    subtitle: "Route optimization and transit corridor graph modeling • 2025",
     badge: "Core Algorithm Developer",
     category: "algorithms",
     categoryLabel: "Algorithms",
     status: "Completed",
     statusType: "completed",
-    projectType: "Academic Project",
+    projectType: "Academic Coursework",
     githubUrl: "https://github.com/devpanda4real/JAVA",
     role: "Core Algorithm Developer",
-    summary: "Algorithmic route optimization and spatial network modeling for simulated urban transit corridors.",
+    summary: "Java graph routing engine modeling simulated urban transit corridors and intersections with in-memory algorithms.",
     tags: ["Java", "Graph Theory", "Dijkstra", "BFS/DFS", "OOP"],
     completedContributions: [
       {
-        title: "Graph Modeling",
-        desc: "Built in-memory urban transit networks utilizing adjacency structures for intersections & roads."
+        title: "Graph Routing Algorithms",
+        desc: "Implemented Dijkstra & BFS shortest-path algorithms to calculate efficient transit routes."
       },
       {
-        title: "Path Optimization",
-        desc: "Implemented shortest-path graph traversal (Dijkstra / BFS) to calculate efficient transit routes."
-      },
-      {
-        title: "Spatial Registry",
-        desc: "Designed modular location registry services to query and update urban point-of-interest nodes."
+        title: "Spatial Node Registry",
+        desc: "Built in-memory adjacency structures to model urban intersections and transit points."
       }
     ],
     plannedImprovements: [
       {
-        title: "Web Map Visualizer",
-        desc: "Plan to build an interactive web GUI visualizer using Leaflet / Mapbox."
-      },
-      {
-        title: "Live Traffic Weighting",
-        desc: "Plan to integrate real-time congestion factor multipliers into route calculation."
+        title: "Interactive Web Visualizer",
+        desc: "Plan to build a browser-based transit map visualizer using Leaflet."
       }
     ]
   },
   {
     id: "detail-me",
-    title: "Detail Me — Mobile Dispatch Architecture",
+    title: "Detail Me — Dispatch Architecture",
     fileName: "DetailMe_App_Spec.pdf",
-    subtitle: "Cloud-connected mobile service dispatch architecture, dynamic technician allocation models, and customer booking lifecycle.",
-    badge: "Systems Architecture Lead",
+    subtitle: "On-demand mobile technician allocation & booking specs • 2025",
+    badge: "Systems Architecture & Specification (Academic Concept)",
     category: "concept",
     categoryLabel: "Concepts & Mobile",
     status: "Completed",
     statusType: "completed",
-    projectType: "Concept & Spec",
-    role: "Systems Architecture Lead",
-    summary: "Cloud-connected mobile service dispatch architecture, dynamic technician allocation models, and customer booking lifecycle.",
-    tags: ["Systems Architecture", "Dispatch Logic", "REST API Workflows", "Mobile UI/UX", "MVP Specifications"],
+    projectType: "Academic Concept",
+    role: "Systems Architecture & Specification",
+    summary: "Architecture specification and technical feasibility study for an on-demand mobile technician dispatch platform.",
+    tags: ["Systems Architecture", "Dispatch Logic", "REST API Workflows", "Mobile UI/UX"],
     completedContributions: [
       {
-        title: "Dispatch & Service Architecture",
-        desc: "Formulated end-to-end user workflows, automated technician dispatch models, and booking lifecycle state machines."
+        title: "Dispatch State Machine",
+        desc: "Formulated automated matching logic pairing nearby technicians with booking requests."
       },
       {
-        title: "UI/UX Prototyping & Flow Mapping",
-        desc: "Drafted mobile user journey flows and screen wireframes to minimize user interaction friction and booking latency."
-      },
-      {
-        title: "Systems Feasibility & Architecture Deck",
-        desc: "Produced investor-ready system architecture deck, technical feasibility overview, and demo video."
+        title: "System Architecture Blueprint",
+        desc: "Designed mobile user journeys, REST API endpoint contracts, and system specifications."
       }
     ],
     plannedImprovements: [
       {
-        title: "Mobile Client MVP",
-        desc: "Plan to develop the mobile client application in Flutter / React Native with live GPS technician dispatch."
-      },
-      {
-        title: "Cloud Backend & Payments",
-        desc: "Plan to implement cloud-hosted serverless APIs for real-time tracking and digital payments."
+        title: "Mobile Client Prototype",
+        desc: "Plan to develop a Flutter mobile client prototype with real-time GPS tracking."
       }
     ]
   }

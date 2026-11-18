@@ -44,7 +44,7 @@ export default function Experience() {
               <div className="spotlight-card p-6">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs font-mono text-cyan-400">{degreeProgress.period}</span>
-                  <span className="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 text-[11px] font-mono border border-cyan-500/20">
+                  <span className="px-2.5 py-0.5 rounded bg-cyan-500/10 text-cyan-300 text-xs font-mono border border-cyan-500/20">
                     {degreeProgress.status}
                   </span>
                 </div>
@@ -52,11 +52,11 @@ export default function Experience() {
                 <p className="text-sm font-medium text-slate-300">{degreeProgress.institution}</p>
 
                 {/* Academic Results & Progress Telemetry */}
-                <div className="mt-3 p-3 rounded-xl bg-slate-950/80 border border-cyan-500/20 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                <div className="mt-3 p-3 rounded-xl bg-slate-950/80 border border-cyan-500/20 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
                     <span className="text-cyan-300 font-bold">CGPA: {degreeProgress.cgpa}</span>
-                    <span className="text-slate-400 text-[11px]">({degreeProgress.division})</span>
+                    <span className="text-slate-400 text-xs">({degreeProgress.division})</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-slate-300 font-semibold">
@@ -65,7 +65,7 @@ export default function Experience() {
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-400 mt-2.5 leading-relaxed">{degreeProgress.focus}</p>
+                <p className="text-sm text-slate-300 mt-3 leading-relaxed">{degreeProgress.focus}</p>
               </div>
             </div>
 
@@ -77,13 +77,13 @@ export default function Experience() {
                 <div className="spotlight-card p-5">
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-xs font-mono text-slate-400">{edu.year}</span>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20">
+                    <span className="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">
                       {edu.status}
                     </span>
                   </div>
                   <h3 className="text-base font-bold text-white mt-1">{edu.level}</h3>
-                  <p className="text-xs font-medium text-slate-400">{edu.school}</p>
-                  {edu.stream && <p className="text-xs text-slate-500 mt-1">{edu.stream}</p>}
+                  <p className="text-sm font-medium text-slate-300">{edu.school}</p>
+                  {edu.stream && <p className="text-xs text-slate-400 mt-1">{edu.stream}</p>}
                 </div>
               </div>
             ))}
@@ -98,7 +98,7 @@ export default function Experience() {
               {languages.map((lang, idx) => (
                 <div key={idx} className="p-3 rounded-xl bg-slate-950/70 border border-white/5">
                   <div className="text-sm font-bold text-white">{lang.name}</div>
-                  <div className="text-[11px] text-cyan-400 font-mono mt-0.5">{lang.proficiency}</div>
+                  <div className="text-xs text-cyan-400 font-mono mt-0.5">{lang.proficiency}</div>
                 </div>
               ))}
             </div>
@@ -114,12 +114,12 @@ export default function Experience() {
                 <div key={idx} className="p-3 rounded-xl bg-slate-950/70 border border-white/5 flex flex-col gap-1">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-white">{ref.name}</span>
-                    <span className="text-[10px] font-mono text-cyan-400">{ref.badge}</span>
+                    <span className="text-xs font-mono text-cyan-400">{ref.badge}</span>
                   </div>
-                  <span className="text-[11px] text-slate-400">{ref.department}</span>
+                  <span className="text-xs text-slate-300">{ref.department}</span>
 
                   {ref.email && (
-                    <span className="text-[11px] font-mono text-cyan-400 flex items-center gap-1 mt-0.5">
+                    <span className="text-xs font-mono text-cyan-400 flex items-center gap-1 mt-0.5">
                       <Mail className="w-3 h-3" />
                       <span>
                         Available upon formal academic request (
@@ -133,7 +133,7 @@ export default function Experience() {
 
                   {ref.linkedIn && (
                     <div className="flex flex-wrap items-center justify-between gap-2 mt-1">
-                      <span className="text-[11px] text-slate-400">
+                      <span className="text-xs text-slate-300">
                         Tel:{' '}
                         <span data-visibility="referee-phone">
                           <a
@@ -148,7 +148,7 @@ export default function Experience() {
                         href={ref.linkedIn}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[11px] font-mono text-cyan-400 hover:underline flex items-center gap-1"
+                        className="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1"
                       >
                         <span>LinkedIn Profile</span>
                         <ExternalLink className="w-3 h-3" />
@@ -187,8 +187,8 @@ export default function Experience() {
                     <span className="text-xs font-mono text-slate-400">{role.period}</span>
                   </div>
                   <h3 className="text-base font-bold text-white mt-1">{role.title}</h3>
-                  <p className="text-xs font-medium text-slate-400">{role.subtitle}</p>
-                  <p className="text-xs text-slate-300 mt-2 leading-relaxed">{role.description}</p>
+                  <p className="text-sm font-medium text-cyan-400/90">{role.subtitle}</p>
+                  <p className="text-sm text-slate-300 mt-2.5 leading-relaxed">{role.description}</p>
                 </div>
               </div>
             ))}

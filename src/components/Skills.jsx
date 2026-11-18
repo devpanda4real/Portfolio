@@ -79,14 +79,14 @@ export default function Skills() {
                   <h3 className="font-bold text-white text-base">{category.category}</h3>
                 </div>
 
-                <ul className="space-y-3 text-xs text-slate-300">
+                <ul className="space-y-3.5 text-sm text-slate-300">
                   {category.skills.map((skill, sIdx) => (
                     <li key={sIdx} className="flex items-start gap-2.5">
                       <span className={`w-1.5 h-1.5 rounded-full ${colors.dot} shrink-0 mt-1.5`} />
                       <div>
-                        <strong className="text-white font-medium">{skill.name}</strong>
+                        <strong className="text-white font-semibold text-sm">{skill.name}</strong>
                         {skill.subtext && (
-                          <span className="block text-[11px] text-slate-400 font-mono mt-0.5">
+                          <span className="block text-xs text-slate-400 font-mono mt-0.5">
                             {skill.subtext}
                           </span>
                         )}
@@ -96,7 +96,7 @@ export default function Skills() {
                 </ul>
               </div>
 
-              <div className={`mt-6 pt-4 border-t border-white/5 text-[11px] font-mono ${colors.tagText}`}>
+              <div className={`mt-6 pt-4 border-t border-white/5 text-xs font-mono ${colors.tagText}`}>
                 SLTC &bull; Competency Verified
               </div>
             </div>

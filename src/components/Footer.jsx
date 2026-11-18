@@ -3,7 +3,7 @@ import { profileData } from '../data/profile.js';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 py-12 text-center text-xs text-slate-500 font-mono">
+    <footer className="border-t border-white/5 py-12 text-center text-xs sm:text-sm text-slate-400 font-mono">
       <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-slate-400">
           <span className="w-2 h-2 rounded-full bg-cyan-400" />

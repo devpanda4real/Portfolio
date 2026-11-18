@@ -1,30 +1,30 @@
 /**
  * Leadership Experience & Academic References Data
- * Edit this file to update capstone leadership roles or academic references.
+ * Concise, factual, ATS-friendly, and clearly categorized.
  */
 
 export const experienceData = {
   roles: [
     {
-      domain: "Cloud & Systems Engineering",
+      domain: "Technical Projects & Practical Labs",
       period: "2024 – Present",
-      title: "Cloud & Systems Engineering Labs — SLTC",
-      subtitle: "Undergraduate Systems Contributor • Faculty of Computing & IT",
-      description: "Configured Linux server environments and automated operational tasks using Bash shell scripting. Deployed multi-service application stacks with Docker containers, configured enterprise network topologies and TCP/IP routing tables, and established rigorous Software Quality Assurance (SQA) test plans with Postman."
+      title: "Technical Projects & Practical Labs — SLTC",
+      subtitle: "Undergraduate Lab Contributor • Faculty of Computing & IT",
+      description: "Configured Linux virtual environments with Bash automation scripts. Practiced Docker multi-container deployments, local TCP/IP networking topologies, and Postman API test suites."
     },
     {
-      domain: "University & Community Service",
+      domain: "Leadership & Community Involvement",
       period: "2025 – Present",
-      title: "University Activities & Community Outreach — SLTC",
+      title: "Leadership & Community Involvement — SLTC",
       subtitle: "Student Volunteer • SLTC Student Interactive Society (SIS)",
-      description: "Coordinated event logistics and budget planning for the 2025 University New Year Ceremony alongside student committees. Organized regional flood-relief donation intake and community food/goods distribution; actively joined the coastal beach cleaning program."
+      description: "Coordinated logistics and budget planning for university student ceremonies. Participated in community flood-relief donation distribution and coastal environmental cleanup initiatives."
     },
     {
-      domain: "Capstone Project Leadership",
+      domain: "Academic Capstone Project",
       period: "2025 – 2026",
-      title: "Team Lead & Business Analyst — Luxora Group 08",
-      subtitle: "CCS2313 — System Analysis & Design (SLTC)",
-      description: "Led an engineering team through the full SDLC. Authored 71 Functional Requirements, 23 Non-Functional Requirements, and 25 Business Rules in a formal BRD, and delivered the AI chatbot triage MVP."
+      title: "Business Analyst & Chatbot Developer — Luxora Group 08",
+      subtitle: "CCS2313 — System Analysis & Design (SLTC Research University)",
+      description: "Authored formal BRD documenting 71 Functional Requirements, 23 Non-Functional Requirements, and 25 Business Rules. Contributed system analysis and chatbot scoping through the academic SDLC."
     }
   ],
 

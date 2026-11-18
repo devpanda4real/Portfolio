@@ -80,7 +80,7 @@ export default function Projects({ onOpenLuxoraModal }) {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-white/10 text-xs font-medium">
+        <div className="flex flex-wrap items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-white/10 text-xs sm:text-sm font-medium">
           <button
             onClick={() => setActiveFilter('all')}
             className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
@@ -125,19 +125,19 @@ export default function Projects({ onOpenLuxoraModal }) {
       </div>
 
       {/* Transparent Status Legend Bar */}
-      <div className="mb-10 p-4 rounded-xl bg-slate-900/60 border border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+      <div className="mb-10 p-4 rounded-xl bg-slate-900/60 border border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm font-mono">
         <div className="flex items-center gap-2 text-slate-300">
           <Info className="w-4 h-4 text-cyan-400" />
           <span className="text-slate-400 font-sans">Transparent Status System:</span>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-400" /> Completed
           </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 font-semibold">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 font-semibold">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" /> In Production
           </span>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-sky-500/10 text-sky-400 border border-sky-500/20 font-semibold">
             <span className="w-2 h-2 rounded-full bg-sky-400" /> Planned
           </span>
         </div>
@@ -199,29 +199,29 @@ export default function Projects({ onOpenLuxoraModal }) {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-mono text-center shrink-0">
                   <div className="p-3 rounded-xl bg-slate-950/80 border border-cyan-500/20">
                     <span className="text-xl font-bold text-cyan-400">{flagship.metrics.frCount}</span>
-                    <span className="block text-[10px] text-slate-400 mt-0.5">Functional Req (FRs)</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">Functional Req (FRs)</span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-950/80 border border-indigo-500/20">
                     <span className="text-xl font-bold text-indigo-400">{flagship.metrics.nfrCount}</span>
-                    <span className="block text-[10px] text-slate-400 mt-0.5">Non-Functional Req</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">Non-Functional Req</span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-950/80 border border-amber-500/20">
                     <span className="text-xl font-bold text-amber-400">{flagship.metrics.brCount}</span>
-                    <span className="block text-[10px] text-slate-400 mt-0.5">Business Rules (BR)</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">Business Rules (BR)</span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-950/80 border border-emerald-500/20">
                     <span className="text-xl font-bold text-emerald-400">{flagship.metrics.docType}</span>
-                    <span className="block text-[10px] text-slate-400 mt-0.5">Formal System Spec</span>
+                    <span className="block text-xs text-slate-400 mt-0.5">Formal System Spec</span>
                   </div>
                 </div>
               </div>
 
               {/* Project Overview Callout */}
               <div className="p-4 rounded-xl bg-slate-900/60 border border-white/5 mb-6">
-                <div className="text-[11px] font-mono font-semibold uppercase text-cyan-400 mb-1 flex items-center gap-1.5">
+                <div className="text-xs font-mono font-semibold uppercase text-cyan-400 mb-1.5 flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5" /> Project Overview
                 </div>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{flagship.summary}</p>
+                <p className="text-sm sm:text-base text-slate-300 leading-relaxed">{flagship.summary}</p>
               </div>
 
               {/* SECTION A: Completed Work */}
@@ -235,7 +235,7 @@ export default function Projects({ onOpenLuxoraModal }) {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300 leading-relaxed">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-300 leading-relaxed">
                   {flagship.completedContributions.map((c, i) => (
                     <div
                       key={i}
@@ -244,7 +244,7 @@ export default function Projects({ onOpenLuxoraModal }) {
                       }`}
                     >
                       <div className="p-1 rounded bg-cyan-500/10 text-cyan-400 shrink-0 mt-0.5">
-                        <CheckSquare className="w-3.5 h-3.5" />
+                        <CheckSquare className="w-4 h-4" />
                       </div>
                       <div>
                         <strong className="text-white">{c.title}:</strong> {c.desc}
@@ -264,10 +264,10 @@ export default function Projects({ onOpenLuxoraModal }) {
                     Planned Improvements
                   </span>
                 </div>
-                <ul className="space-y-2 text-xs text-slate-300">
+                <ul className="space-y-2 text-sm text-slate-300 leading-relaxed">
                   {flagship.plannedImprovements.map((p, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <Bot className="w-3.5 h-3.5 text-sky-400 shrink-0 mt-0.5" />
+                      <Bot className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                       <span>
                         <strong className="text-white">{p.title}:</strong> {p.desc}
                       </span>
@@ -279,12 +279,12 @@ export default function Projects({ onOpenLuxoraModal }) {
               {/* Technology Stack & Actions */}
               <div className="pt-5 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
                 <div>
-                  <span className="text-[11px] font-mono text-slate-400 block mb-1.5">Technology Stack:</span>
+                  <span className="text-xs font-mono text-slate-400 block mb-1.5">Technology Stack:</span>
                   <div className="flex flex-wrap gap-1.5">
                     {flagship.tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-white/10 text-[11px] font-mono text-cyan-300"
+                        className="px-2.5 py-1 rounded-md bg-slate-950 border border-white/10 text-xs font-mono text-cyan-300"
                       >
                         {tag}
                       </span>
@@ -295,7 +295,7 @@ export default function Projects({ onOpenLuxoraModal }) {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={onOpenLuxoraModal}
-                    className="px-4 py-2 rounded-xl text-xs font-semibold text-white bg-slate-800 hover:bg-slate-700 border border-white/10 hover:border-cyan-400/50 transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-slate-800 hover:bg-slate-700 border border-white/10 hover:border-cyan-400/50 transition-all flex items-center gap-1.5 shadow-sm cursor-pointer"
                   >
                     <FileSpreadsheet className="w-4 h-4 text-cyan-400" />
                     <span>View BRD, FRs/NFRs &amp; Team Roles</span>
@@ -304,7 +304,7 @@ export default function Projects({ onOpenLuxoraModal }) {
                     href={flagship.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 transition-all flex items-center gap-1.5 shadow-md shadow-cyan-500/20"
+                    className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 transition-all flex items-center gap-1.5 shadow-md shadow-cyan-500/20"
                   >
                     <span>Launch Live Platform</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -333,18 +333,18 @@ export default function Projects({ onOpenLuxoraModal }) {
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                   </div>
-                  <div className="px-2.5 py-0.5 rounded-md bg-slate-900 border border-white/5 text-[10px] font-mono text-indigo-300 flex items-center gap-1">
-                    <Cpu className="w-2.5 h-2.5 text-indigo-400" />
+                  <div className="px-2.5 py-0.5 rounded-md bg-slate-900 border border-white/5 text-xs font-mono text-indigo-300 flex items-center gap-1">
+                    <Cpu className="w-3 h-3 text-indigo-400" />
                     <span>{project.fileName}</span>
                   </div>
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-xs font-mono border border-emerald-500/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" /> {project.status}
                   </span>
                 </div>
 
                 <div className="p-6">
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-400 text-[11px] font-mono border border-indigo-500/20">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-400 text-xs font-mono border border-indigo-500/20">
                       <GitBranch className="w-3 h-3" /> {project.role}
                     </span>
                     <span className="text-xs font-mono text-slate-400">{project.projectType}</span>
@@ -359,14 +359,14 @@ export default function Projects({ onOpenLuxoraModal }) {
                       </span>
                     )}
                   </h3>
-                  <p className="text-xs text-slate-300 mt-2 mb-4 leading-relaxed">{project.summary}</p>
+                  <p className="text-sm text-slate-300 mt-2.5 mb-4 leading-relaxed">{project.summary}</p>
 
                   {/* Completed Work */}
                   <div className="mb-4">
-                    <div className="flex items-center gap-1.5 mb-2 text-xs font-semibold text-emerald-400 font-mono">
+                    <div className="flex items-center gap-1.5 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
                       <CheckCircle className="w-3.5 h-3.5" /> Completed Work:
                     </div>
-                    <ul className="space-y-2 text-xs text-slate-300 leading-relaxed">
+                    <ul className="space-y-2 text-sm text-slate-300 leading-relaxed">
                       {project.completedContributions?.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1.5" />
@@ -380,14 +380,14 @@ export default function Projects({ onOpenLuxoraModal }) {
 
                   {/* Planned Improvements */}
                   {project.plannedImprovements && project.plannedImprovements.length > 0 && (
-                    <div className="p-3 rounded-lg bg-sky-950/20 border border-sky-500/20 mb-4">
-                      <div className="flex items-center gap-1.5 mb-1.5 text-xs font-semibold text-sky-400 font-mono">
+                    <div className="p-3.5 rounded-xl bg-sky-950/20 border border-sky-500/20 mb-4">
+                      <div className="flex items-center gap-1.5 mb-1.5 text-xs font-bold uppercase tracking-wider text-sky-400 font-mono">
                         <Compass className="w-3.5 h-3.5" /> Planned Improvements:
                       </div>
-                      <ul className="space-y-1.5 text-[11px] text-slate-300">
+                      <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
                         {project.plannedImprovements.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-1.5">
-                            <span className="text-sky-400">&bull;</span>
+                            <span className="text-sky-400 font-bold">&bull;</span>
                             <span>
                               <strong>{item.title}:</strong> {item.desc}
                             </span>
@@ -402,7 +402,7 @@ export default function Projects({ onOpenLuxoraModal }) {
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-0.5 rounded-md bg-slate-900 border border-white/5 text-[11px] font-mono text-indigo-300"
+                        className="px-2.5 py-1 rounded-md bg-slate-900 border border-white/5 text-xs font-mono text-indigo-300"
                       >
                         {tag}
                       </span>
@@ -419,7 +419,7 @@ export default function Projects({ onOpenLuxoraModal }) {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-400 hover:underline"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-400 hover:underline"
                     >
                       <Code2 className="w-3.5 h-3.5" /> View Repository
                       <ExternalLink className="w-3 h-3" />
@@ -431,7 +431,7 @@ export default function Projects({ onOpenLuxoraModal }) {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 hover:underline"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-400 hover:underline"
                     >
                       <Globe className="w-3.5 h-3.5" /> Live Platform
                       <ExternalLink className="w-3 h-3" />
@@ -439,12 +439,12 @@ export default function Projects({ onOpenLuxoraModal }) {
                   )}
 
                   {!project.githubUrl && !project.liveUrl && (
-                    <span className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400">
+                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-400">
                       <Layout className="w-3.5 h-3.5 text-sky-400" /> Systems Architecture
                     </span>
                   )}
                 </div>
-                <span className="text-[11px] text-slate-500 font-mono">{project.projectType}</span>
+                <span className="text-xs text-slate-500 font-mono">{project.projectType}</span>
               </div>
             </div>
           );

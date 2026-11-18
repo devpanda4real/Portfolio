@@ -202,7 +202,7 @@ Status:   Available for On-site / Hybrid / Remote (2027)`;
               <div className="flex items-center gap-1">
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-t-md bg-slate-800/80 border-t-2 border-cyan-400 text-xs font-mono text-white">
                   <span className="font-semibold tracking-tight">PowerShell 7.4</span>
-                  <span className="text-[10px] text-cyan-400 ml-0.5">[Admin]</span>
+                  <span className="text-xs text-cyan-400 ml-0.5 font-bold">[Admin]</span>
                   <span
                     onClick={() => setHistory([])}
                     className="ml-1 opacity-60 hover:opacity-100 cursor-pointer text-xs"
@@ -245,7 +245,7 @@ Status:   Available for On-site / Hybrid / Remote (2027)`;
           <div
             ref={terminalBodyRef}
             onClick={() => inputRef.current?.focus()}
-            className="p-4 font-mono text-xs sm:text-[13px] leading-relaxed max-h-[420px] overflow-y-auto bg-dark-950/90 text-slate-200"
+            className="p-4 font-mono text-xs sm:text-sm leading-relaxed max-h-[420px] overflow-y-auto bg-dark-950/90 text-slate-200"
           >
             {/* Intro Welcome Banner */}
             <div className="mb-4 text-slate-400 opacity-90">
@@ -271,7 +271,7 @@ Status:   Available for On-site / Hybrid / Remote (2027)`;
                   <span>{promptPrefix}</span>
                   <span className="text-white">{item.cmd}</span>
                 </div>
-                <pre className="text-slate-300 mt-1 whitespace-pre-wrap font-mono leading-normal opacity-95">
+                <pre className="text-slate-300 mt-1 whitespace-pre-wrap font-mono leading-normal opacity-95 text-xs sm:text-sm">
                   {item.output}
                 </pre>
               </div>
@@ -286,7 +286,7 @@ Status:   Available for On-site / Hybrid / Remote (2027)`;
                 value={commandInput}
                 onChange={(e) => setCommandInput(e.target.value)}
                 onKeyDown={onKeyDown}
-                className="flex-1 bg-transparent outline-none text-white font-mono text-xs sm:text-[13px]"
+                className="flex-1 bg-transparent outline-none text-white font-mono text-xs sm:text-sm"
                 spellCheck={false}
               />
             </div>
@@ -294,7 +294,7 @@ Status:   Available for On-site / Hybrid / Remote (2027)`;
         )}
 
         {/* Suggestion Chips */}
-        <div className="px-3 py-2 bg-slate-950/80 border-t border-white/5 flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-slate-400">
+        <div className="px-3 py-2 bg-slate-950/80 border-t border-white/5 flex flex-wrap items-center gap-1.5 text-xs font-mono text-slate-400">
           <span className="text-slate-500 mr-1">Quick:</span>
           {['whoami', 'about', 'skills', 'projects', 'education', 'neofetch', 'clear'].map(
             (cmd) => (

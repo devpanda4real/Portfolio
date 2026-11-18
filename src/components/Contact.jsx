@@ -189,7 +189,7 @@ export default function Contact({ onCopyEmail }) {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1.5 font-mono">
+                <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 font-mono">
                   Your Name / Organization
                 </label>
                 <input
@@ -202,7 +202,7 @@ export default function Contact({ onCopyEmail }) {
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1.5 font-mono">
+                <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 font-mono">
                   Your Contact Email
                 </label>
                 <input
@@ -217,7 +217,7 @@ export default function Contact({ onCopyEmail }) {
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1.5 font-mono">
+              <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 font-mono">
                 Subject
               </label>
               <input
@@ -230,7 +230,7 @@ export default function Contact({ onCopyEmail }) {
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1.5 font-mono">
+              <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 font-mono">
                 Message
               </label>
               <textarea

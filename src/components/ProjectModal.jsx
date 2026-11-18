@@ -60,7 +60,7 @@ export default function ProjectModal({ isOpen, onClose }) {
               1. Luxora Group 08 &mdash; Team Roles &amp; Responsibilities (CCS2313)
             </h4>
             <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/70">
-              <table className="w-full text-left text-[11px] font-mono">
+              <table className="w-full text-left text-xs font-mono">
                 <thead className="bg-slate-900/80 border-b border-white/10 text-slate-400">
                   <tr>
                     <th className="py-2.5 px-3 font-semibold">Team Member</th>
@@ -69,28 +69,28 @@ export default function ProjectModal({ isOpen, onClose }) {
                 </thead>
                 <tbody className="divide-y divide-white/5 text-slate-300">
                   <tr className="bg-cyan-500/10 font-bold text-cyan-300">
-                    <td className="py-2 px-3 flex items-center gap-1.5">
+                    <td className="py-2.5 px-3 flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" /> Imesh Kaushalya (You)
                     </td>
-                    <td className="py-2 px-3">
+                    <td className="py-2.5 px-3">
                       Business Analysis (BA), Chatbot Development, Requirements (FR/NFR) &amp; Business Rules
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-3 font-medium text-white">Deshan</td>
-                    <td className="py-2 px-3 text-slate-400">Project Management &amp; Frontend Support</td>
+                    <td className="py-2.5 px-3 font-medium text-white">Deshan</td>
+                    <td className="py-2.5 px-3 text-slate-400">Project Management &amp; Frontend Support</td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-3 font-medium text-white">Rashen</td>
-                    <td className="py-2 px-3 text-slate-400">Backend Architecture &amp; Database Engineering</td>
+                    <td className="py-2.5 px-3 font-medium text-white">Rashen</td>
+                    <td className="py-2.5 px-3 text-slate-400">Backend Architecture &amp; Database Engineering</td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-3 font-medium text-white">Hasitha</td>
-                    <td className="py-2 px-3 text-slate-400">Frontend Development &amp; Automated Testing</td>
+                    <td className="py-2.5 px-3 font-medium text-white">Hasitha</td>
+                    <td className="py-2.5 px-3 text-slate-400">Frontend Development &amp; Automated Testing</td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-3 font-medium text-white">Dulsath</td>
-                    <td className="py-2 px-3 text-slate-400">UI/UX Design Systems &amp; Quality Assurance</td>
+                    <td className="py-2.5 px-3 font-medium text-white">Dulsath</td>
+                    <td className="py-2.5 px-3 text-slate-400">UI/UX Design Systems &amp; Quality Assurance</td>
                   </tr>
                 </tbody>
               </table>
@@ -107,21 +107,21 @@ export default function ProjectModal({ isOpen, onClose }) {
               <div className="p-3.5 rounded-xl bg-slate-950/70 border border-cyan-500/20">
                 <span className="text-cyan-400 font-mono font-bold text-base block mb-0.5">71 FRs</span>
                 <span className="text-xs text-white font-semibold block mb-1">Functional Requirements</span>
-                <p className="text-[11px] text-slate-400">
+                <p className="text-xs text-slate-400 leading-relaxed">
                   Defined complete system operations across client subscriptions, custom concierge intake, contractor radius dispatch, and administrator moderation.
                 </p>
               </div>
               <div className="p-3.5 rounded-xl bg-slate-950/70 border border-indigo-500/20">
                 <span className="text-indigo-400 font-mono font-bold text-base block mb-0.5">23 NFRs</span>
                 <span className="text-xs text-white font-semibold block mb-1">Non-Functional Requirements</span>
-                <p className="text-[11px] text-slate-400">
+                <p className="text-xs text-slate-400 leading-relaxed">
                   Structured system benchmarks including cryptographic security, uptime SLAs, low-latency API response times, and audit trail retention.
                 </p>
               </div>
               <div className="p-3.5 rounded-xl bg-slate-950/70 border border-amber-500/20">
                 <span className="text-amber-400 font-mono font-bold text-base block mb-0.5">25 Rules</span>
                 <span className="text-xs text-white font-semibold block mb-1">Business Rules (BR-01&ndash;BR-25)</span>
-                <p className="text-[11px] text-slate-400">
+                <p className="text-xs text-slate-400 leading-relaxed">
                   Formulated platform policies governing coin wallet refunds, zero-loss cancellation restoration, and dynamic pricing multipliers.
                 </p>
               </div>

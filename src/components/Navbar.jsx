@@ -43,7 +43,7 @@ export default function Navbar({ onOpenAdmin }) {
               <span className="font-bold text-white text-sm sm:text-base tracking-tight group-hover:text-cyan-400 transition-colors block truncate">
                 {profileData.name}
               </span>
-              <span className="block text-[11px] sm:text-xs text-slate-400 font-mono truncate">
+              <span className="block text-xs text-slate-400 font-mono truncate">
                 {profileData.degree.replace('in ', '')} @ SLTC
               </span>
             </div>
@@ -51,7 +51,7 @@ export default function Navbar({ onOpenAdmin }) {
 
           {/* Navigation Links & Action */}
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            <nav className="hidden md:flex items-center p-1 rounded-2xl bg-slate-900/90 border border-white/10 shadow-inner text-xs font-mono">
+            <nav className="hidden md:flex items-center p-1 rounded-2xl bg-slate-900/90 border border-white/10 shadow-inner text-xs sm:text-sm font-mono">
               <a href="#about" className="px-3 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors">
                 <span>About</span>
               </a>
