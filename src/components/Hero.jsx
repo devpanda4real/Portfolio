@@ -25,30 +25,28 @@ export default function Hero({ onCopyEmail }) {
         <span className="truncate">{profileData.statusBadge}</span>
       </div>
 
-      {/* Cloud Infrastructure Telemetry Ribbon */}
+      {/* Cloud Infrastructure Technical Pillars */}
       <div className="mb-6 sm:mb-8 flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 text-xs font-mono w-full max-w-xs sm:max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg bg-slate-900/90 border border-cyan-500/25 text-cyan-300 shadow-sm shadow-cyan-500/10">
           <Cloud className="w-3.5 h-3.5 text-cyan-400 flex-shrink-0" />
           <span>
-            Cloud: <strong className="text-white">ap-south-1</strong>
-            <span className="hidden sm:inline"> (Sri Lanka)</span>
+            Cloud: <strong className="text-white">AWS (ap-south-1)</strong>
           </span>
         </div>
         <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg bg-slate-900/90 border border-indigo-500/25 text-indigo-300 shadow-sm shadow-indigo-500/10">
           <Server className="w-3.5 h-3.5 text-indigo-400 flex-shrink-0" />
           <span>
-            Docker: <strong className="text-emerald-400">Active</strong>
+            Containers: <strong className="text-emerald-400">Docker OCI</strong>
           </span>
         </div>
         <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg bg-slate-900/90 border border-emerald-500/25 text-emerald-300 shadow-sm shadow-emerald-500/10">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
+          <Network className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
           <span>
-            Latency: <strong className="text-white">12ms</strong>
+            Networking: <strong className="text-white">TCP/IP &amp; DNS</strong>
           </span>
         </div>
         <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900/90 border border-white/10 text-slate-400">
-          <Network className="w-3.5 h-3.5 text-sky-400 flex-shrink-0" />
-          <span>Distributed Mesh Topology</span>
+          <span>Architecture: <strong className="text-slate-200">Cloud Systems</strong></span>
         </div>
       </div>
 

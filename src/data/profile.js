@@ -36,8 +36,8 @@ export const profileData = {
   statistics: [
     { label: "Cumulative GPA", value: "3.53", subtext: "Second Class Upper" },
     { label: "Degree Progress", value: "52 / 128", subtext: "Credits Completed (40.6%)" },
-    { label: "Target SGPA", value: "3.85+", subtext: "Coursework & Labs" },
-    { label: "Code Sprints", value: "18 Days", subtext: "Active Velocity" }
+    { label: "Academic Standing", value: "Level 2", subtext: "SLTC Undergraduate" },
+    { label: "Expected Year", value: "2028", subtext: "Graduation Target" }
   ],
 
   socialLinks: {

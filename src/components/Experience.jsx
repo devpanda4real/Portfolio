@@ -103,11 +103,45 @@ export default function Experience() {
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Professional References Box */}
-          <div className="mt-6 spotlight-card p-6 border-indigo-500/20">
+        {/* COLUMN 2: EXPERIENCE & LEADERSHIP */}
+        <div id="leadership">
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-indigo-400 uppercase mb-4">
+            <Briefcase className="w-4 h-4" /> Practical Experience &amp; Leadership
+          </div>
+          <h2 className="text-3xl font-bold text-white tracking-tight mb-8">
+            Experience &amp; Leadership
+          </h2>
+
+          <div className="space-y-6 relative border-l-2 border-slate-800 pl-6 ml-3">
+            {roles.map((role, idx) => (
+              <div key={idx} className="relative group">
+                <div
+                  className={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full ${
+                    idx === 0
+                      ? 'bg-indigo-500 shadow-lg shadow-indigo-500/50'
+                      : 'bg-slate-700'
+                  } border-4 border-dark-950 group-hover:scale-125 transition-transform`}
+                />
+
+                <div className="spotlight-card p-6">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-mono text-indigo-400">{role.domain}</span>
+                    <span className="text-xs font-mono text-slate-400">{role.period}</span>
+                  </div>
+                  <h3 className="text-base font-bold text-white mt-1">{role.title}</h3>
+                  <p className="text-sm font-medium text-cyan-400/90">{role.subtitle}</p>
+                  <p className="text-sm text-slate-300 mt-2.5 leading-relaxed">{role.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Academic & Professional References Box */}
+          <div id="references" className="mt-8 spotlight-card p-6 border-indigo-500/20">
             <div className="flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-indigo-400 uppercase mb-3">
-              <ShieldCheck className="w-4 h-4" /> References
+              <ShieldCheck className="w-4 h-4" /> Academic &amp; Professional References
             </div>
             <div className="space-y-3">
               {referees.map((ref, idx) => (
@@ -158,40 +192,6 @@ export default function Experience() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* COLUMN 2: EXPERIENCE & LEADERSHIP */}
-        <div>
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-indigo-400 uppercase mb-4">
-            <Briefcase className="w-4 h-4" /> Practical Experience &amp; Leadership
-          </div>
-          <h2 className="text-3xl font-bold text-white tracking-tight mb-8">
-            Experience &amp; Leadership
-          </h2>
-
-          <div className="space-y-6 relative border-l-2 border-slate-800 pl-6 ml-3">
-            {roles.map((role, idx) => (
-              <div key={idx} className="relative group">
-                <div
-                  className={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full ${
-                    idx === 0
-                      ? 'bg-indigo-500 shadow-lg shadow-indigo-500/50'
-                      : 'bg-slate-700'
-                  } border-4 border-dark-950 group-hover:scale-125 transition-transform`}
-                />
-
-                <div className="spotlight-card p-6">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-mono text-indigo-400">{role.domain}</span>
-                    <span className="text-xs font-mono text-slate-400">{role.period}</span>
-                  </div>
-                  <h3 className="text-base font-bold text-white mt-1">{role.title}</h3>
-                  <p className="text-sm font-medium text-cyan-400/90">{role.subtitle}</p>
-                  <p className="text-sm text-slate-300 mt-2.5 leading-relaxed">{role.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>

@@ -72,14 +72,13 @@ Candidate:      Imesh Kaushalya — Cloud & Security Enthusiast
 SLTC Academic:  3.53 CGPA • 52 / 128 Credits Completed
 Core Repos:     JAVA, Basic_python, luxora-concierge, cloud-portfolio`,
 
-  progress: `[ACADEMIC RESULTS & GITHUB VELOCITY TELEMETRY]
+  progress: `[ACADEMIC PROGRESS & DEGREE CREDENTIALS]
 Candidate:          Imesh Kaushalya
 Academic Program:   BSc (Hons) in Cloud Computing — SLTC Research University (2024–2028)
 Cumulative GPA:     3.53 / 4.00 (Second Class Upper Division)
 Degree Credits:     52 / 128 Credits Completed (40.6% Progress)
-Current Sprint:     Targeting 3.85+ SGPA in Coursework & Lab Practicals
-GitHub Velocity:    18 Days Active Code Sprints (github.com/devpanda4real)
-Composite Readiness: 79% Career & Graduation Readiness`
+Academic Standing:  Level 2 Undergraduate (In Good Standing)
+Coursework Areas:   Cloud Infrastructure · Computer Networking · SQA · Cyber Law · Docker`
 };
 
 export const neofetchWindows = `           ..---..           SLTC\\Imesh.Kaushalya@SLTC-CLOUD-NODE-01
